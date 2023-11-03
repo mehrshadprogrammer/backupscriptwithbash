@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#function error_message(){
-#	echo "$1" >&2
-#}
+function error_message(){
+	echo "$1" >&2
+}
 
 
 read -p "Enter the path to the file that you to backup: " BACKUP_PATH
@@ -14,8 +14,8 @@ backup(){
 		cp $1 $BACKUP_PATH
 		return 0
 	else
-#		error_message "error creating backup"
-		echo "Error create backup" 
+		error_message "error creating backup"
+#		echo "Error create backup" 
 		return 1
 	fi
 }
